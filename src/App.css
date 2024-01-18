@@ -2,12 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 } 
+
 
 
 .App{
   background: linear-gradient(188deg,#12122e 0% ,#272764  100%);
   color: white;
+  width:100vw;
  
 
 }  

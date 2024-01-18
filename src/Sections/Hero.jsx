@@ -6,11 +6,11 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="w-full flex xl:flex-row flex-col justify-center gap-10  min-h-screen max-container  p-5"
+        className="w-full flex xl:flex-row  justify-center  min-h-screen max-container px-10"
       >
-        <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
-          <h1 className="mt-10 text-7xl max-sm:text-[72px] max-sm:leading-[82 font-bold">
-            <span className=" relative x-10 pr-10">
+        <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
+          <h1 className="mt-10 text-7xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
+            <span className=" relative x-10">
               The
               <span className="bg-sky-500 inline-block mt-3 rounded-lg">
                 {" "}
@@ -39,13 +39,17 @@ const Hero = () => {
           </button>
            </div>
         </div>
-        <div className="relative flex-1 z-10  flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary mt-20 rounded-md">
+        <div className="relative flex-1 z-10  flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary mt-10 ml-30 rounded-md">
     <img src={pic1} alt='herosection' width={610} height={400} className="object-contain relative z-10 shadow-xl" />
     
 </div>
 
 
       </section>
+ 
+
+
+
      
     </>
     

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const CryptoNews= () => {
+const CryptoNews = () => {
   const [cryptoNews, setCryptoNews] = useState([]);
+  const [displayCount, setDisplayCount] = useState(10);
 
   useEffect(() => {
     const fetchCryptoNews = async () => {
@@ -12,7 +13,7 @@ const CryptoNews= () => {
           {
             params: {
               q: "crypto",
-              apiKey: "1848fbb7fd6d46b5955cfc0150675494", 
+              apiKey: "1848fbb7fd6d46b5955cfc0150675494",
             },
           }
         );
@@ -25,12 +26,16 @@ const CryptoNews= () => {
     fetchCryptoNews();
   }, []);
 
+  const showMore = () => {
+    setDisplayCount(displayCount + 10);
+  };
+
   return (
     <div className="container mx-auto mt-8">
       <h2 className="text-3xl font-bold mb-4">Cryptocurrency News</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {cryptoNews.map((news) => (
+        {cryptoNews.slice(0, displayCount).map((news) => (
           <div
             key={news.url}
             className="bg-dark p-6 rounded-lg shadow-md transition transform hover:scale-105"
@@ -55,6 +60,15 @@ const CryptoNews= () => {
           </div>
         ))}
       </div>
+
+      {cryptoNews.length > displayCount && (
+        <button
+          className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4"
+          onClick={showMore}
+        >
+          Show More
+        </button>
+      )}
     </div>
   );
 };

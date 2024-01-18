@@ -42,6 +42,8 @@ const CryptoTable = () => {
 
           
           const ctx = document.getElementById("chart");
+          const chartWidth = 900;
+        const chartHeight = 700;
           new Chart(ctx, {
             type: "line",
             data: {
@@ -50,7 +52,7 @@ const CryptoTable = () => {
                 {
                   label: `${selectedCoin.name} Price (USD)`,
                   data: prices,
-                  borderColor: "gold", 
+                  borderColor: "green", 
                   fill: false,
                 },
               ],
@@ -64,6 +66,10 @@ const CryptoTable = () => {
                 y: {
                   min: 0,
                 },
+                responsive: false,
+            maintainAspectRatio: false,
+            width: chartWidth,
+            height: chartHeight,
               },
             },
           });
@@ -86,7 +92,7 @@ const CryptoTable = () => {
   };
 
   return (
-    <div className="container mx-auto mt-8">
+    <div className="container mx-auto p-10">
       <h2 className="text-3xl font-bold mb-4">Real-time Cryptocurrency Data</h2>
 
       <input
@@ -111,7 +117,7 @@ const CryptoTable = () => {
           {cryptoData.map((crypto) => (
             <tr
               key={crypto.id}
-              className="hover:bg-gray-400  bg-black cursor-pointer"
+              className="hover:bg-gray-400 rounded-md bg-black cursor-pointer"
               onClick={() => handleCoinClick(crypto)}
             >
               <td className="p-3">{crypto.name}</td>
@@ -133,11 +139,14 @@ const CryptoTable = () => {
       </table>
 
       {selectedCoin && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center">
-          <div className="bg-black p-4 rounded-md shadow-md w-96">
+        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+          <div className="bg-black p-4 rounded-md shadow-md">
             <h3 className="text-lg font-bold mb-2">{selectedCoin.name}</h3>
             <p className="text-gray-600 mb-2">{selectedCoin.symbol}</p>
-            <canvas id="chart" width="400" height="200"></canvas>
+            <div className="flex flex-row w-[800px] h-[300px]">
+
+            <canvas id="chart"></canvas>
+            </div>
             <button
               className="mt-4 bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-700"
               onClick={() => setSelectedCoin(null)}

@@ -20,7 +20,7 @@ const Feature1 = () => {
   }, []);
 
   return (
-    <div className=" container mx-auto mt-8">
+    <div className=" container mx-auto m-10 p-5">
       <h2 className="text-3xl font-bold mb-4">Top Cryptocurrencies</h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

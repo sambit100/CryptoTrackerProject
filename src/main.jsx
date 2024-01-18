@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import {  Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
+import {  Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 
 import Home from './Secondpage/Home.jsx'
 import About from './Secondpage/About.jsx'
