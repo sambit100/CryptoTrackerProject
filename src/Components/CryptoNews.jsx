@@ -63,7 +63,7 @@ const CryptoNews = () => {
 
       {cryptoNews.length > displayCount && (
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4"
+          className="bg-blue-500 text-white mx-30 py-2  rounded-md mt-4"
           onClick={showMore}
         >
           Show More

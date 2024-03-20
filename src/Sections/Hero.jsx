@@ -6,7 +6,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="w-full flex xl:flex-row  justify-center  min-h-screen max-container px-10"
+        className=" hidden sm:flex flex-row  justify-center  min-h-screen max-container px-10"
       >
         <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-10">
           <h1 className="mt-10 text-7xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
@@ -46,6 +46,38 @@ const Hero = () => {
 
 
       </section>
+
+{/* for mobile screen */}
+      <div className='flex sm:hidden justify-start p-2' >
+                
+                 <div className="flex flex-col">
+
+                  <div className="flex flex-col text-4xl font-bold">
+                    <span>The</span>
+                    <span className="bg-sky-500 w-60 rounded-sm">DecentraLized</span>
+                    <span>Cross-Chain</span>
+                    <span>Exchange</span>
+                    <span> <img src={pic1} alt="" /></span>
+                  </div>
+                 
+                  <div className="text-sm  text-gray-500 font-montserrat mt-4">
+              Cryptocurrency, a digital or virtual currency, employs
+              cryptography for security. Operating on decentralized blockchain
+              networks, it diverges from traditional government-issued
+              currencies. The blockchain, a distributed ledger, ensures
+              transparency and immutability by recording all transactions across
+              a computer network.
+            </div>
+                  
+                    
+                 </div>
+
+
+
+                  
+                
+                 
+   </div>
  
 
 
